@@ -8,7 +8,7 @@
     <header class="page-header">
       <nav class="navigation">
         <h1 class="visually-hidden">Девайс</h1>
-        <img class="logo" src="" alt="Логотип Девайс">
+        <img class="logo" src="images/logo-header.svg" alt="Логотип Девайс">
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="search-site">Поиск</label>
           <input class="field" type="text" placeholder="Поиск по сайту" name="search-site" id="search-site">
@@ -63,18 +63,27 @@
     </header>
 
     <main class="main-index">
-      <!--Разметка первого слайда-->
-      <section class="main-slider-first-photo">
+       <section class="slider">
         <h2 class="visually-hidden">Слайды с товарами</h2>
-        <img class="slider-image" src="#" alt="Фото квадрокоптера">
-        <button class="slider-button slider-prev" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
-        </button>
-        <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
-        </button>
-        <h3 class="description-title">Порхает как бабочка, жалит как пчела!</h3>
-        <p class="despription-subtitle">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+        <img class="slider-image" src="images/slider/quadrocopter.png" alt="Квадрокоптер">
+        <img class="slider-image" src="images/slider/fitness-tracker.png" alt="Фитнес-браслет">
+        <img class="slider-image" src="images/slider/selfie-stick.png" alt="Селфи-палка">
+        <div class="slider-button">
+          <button class="slider-button slider-prev" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+        </div>
+        <div class="slider-button">
+          <button class="slider-button slider-next" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
+        </div>
+
+        <h3 class="visually-hidden">Квадрокоптер</h3>
+        <p class="slider-number">01</p>
+        <p class="description-subtitle">Порхает как бабочка, жалит как пчела!</p>
+        <p class="despription-text">Этот обычный, на первый взгляд, квадрокоптер оснащен
+          мощным лазером, замаскированным под стандартную камеру.</p>
         <div class="description-details">
           <button class="button" type="submit">Подробнее</button>
           <table class="description-details-list">
@@ -88,36 +97,12 @@
             </tr>
           </table>
         </div>
-        <ol class="slider-pagination">
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button slider-pagination-button-current" type="button">
-              <span class="visually-hidden">1 фото</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">2 фото</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">3 фото</span>
-            </button>
-          </li>
-         </ol>
-      </section>
-      <!--Разметка второго слайда-->
-      <section class="main-slider-second-photo">
-        <h2 class="visually-hidden">Слайды с товарами</h2>
-        <img class="slider-image" src="#" alt="Фото фитнес-браслета">
-        <button class="slider-button slider-prev" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
-        </button>
-        <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
-        </button>
-        <h3 class="description-title">Худеем правильно!</h3>
-        <p class="despription-subtitle">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+
+        <h3 class="visually-hidden">Фитнес-браслет</h3>
+        <p class="slider-number">02</p>
+        <p class="description-subtitle">Худеем правильно!</p>
+        <p class="despription-text">Мотивирующие фитнес-браслеты помогут найти в себе силы
+            не пропускать занятия и соблюдать диету.</p>
         <div class="description-details">
           <button class="button" type="submit">Подробнее</button>
           <table class="description-details-list">
@@ -129,38 +114,12 @@
             </tr>
           </table>
         </div>
-        <ol class="slider-pagination">
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">1 фото</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button slider-pagination-button-current" type="button">
-              <span class="visually-hidden">2 фото</span>
-            </button>
-          </li>
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">3 фото</span>
-            </button>
-          </li>
-         </ol>
-      </section>
-      <!--Разметка третьего слайда-->
-      <section class="main-slider-third-photo">
-        <h2 class="visually-hidden">Слайды с товарами</h2>
-        <img class="slider-image" src="#" alt="Фото фитнес-браслета">
-        <button class="slider-button slider-prev" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
-        </button>
-        <button class="slider-button slider-next" type="button">
-          <span class="visually-hidden">Следующее фото</span>
-        </button>
-        <h3 class="description-title">Делай селфи, как Бен Стиллер! </h3>
-        <p class="despription-subtitle">
-          Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
-        </p>
+
+        <h3 class="visually-hidden">Селфи-палка</h3>
+        <p class="slider-number">03</p>
+        <p class="description-subtitle">Делай селфи, как Бен Стиллер!</p>
+        <p class="despription-text">Самая длинная палка для селфи доступна в нашем магазине.
+          Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
         <div class="description-details">
           <button class="button" type="submit">Подробнее</button>
           <table class="description-details-list">
@@ -176,9 +135,10 @@
             </tr>
           </table>
         </div>
+
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
+            <button class="slider-pagination-button slider-pagination-button-current" type="button">
               <span class="visually-hidden">1 фото</span>
             </button>
           </li>
@@ -187,55 +147,56 @@
               <span class="visually-hidden">2 фото</span>
             </button>
           </li>
-          <li class="slider-pagination-button slider-pagination-button-current">
+          <li class="slider-pagination-item">
             <button class="slider-pagination-button" type="button">
               <span class="visually-hidden">3 фото</span>
             </button>
           </li>
          </ol>
       </section>
+
       <section class="catalog-categories">
         <h2 class="visually-hidden">Список категорий каталога</h2>
         <ul class="category-list">
           <li class="category-items">
             <a class="category-items-link" href="#">
-              <img class="category-item" src="#" alt="">
+              <img class="category-item" src="images/catalog-categories/vr.svg" alt="">
               <p class="category-item-description">Виртуальная реальность</p>
             </a>
           </li>
           <li class="category-items">
             <a class="category-items-link" href="#">
-              <img class="category-item" src="#" alt="">
+              <img class="category-item" src="images/catalog-categories/monopod.svg" alt="">
               <p class="category-item-description">Моноподы для селфи</p>
             </a>
           </li>
           <li class="category-items">
             <a class="category-items-link" href="#">
-              <img class="category-item" src="#" alt="">
+              <img class="category-item" src="images/catalog-categories/action-camera.svg" alt="">
               <p class="category-item-description">Экшн-камеры</p>
             </a>
           </li>
           <li class="category-items">
             <a class="category-items-link" href="#">
-              <img class="category-item" src="#" alt="">
+              <img class="category-item" src="images/catalog-categories/fitness-tracker.svg" alt="">
               <p class="category-item-description">Фитнес-браслеты</p>
             </a>
           </li>
           <li class="category-items">
             <a class="category-items-link" href="#">
-              <img class="category-item" src="#" alt="">
+              <img class="category-item" src="images/catalog-categories/smart-watch.svg" alt="">
               <p class="category-item-description">Умные часы</p>
             </a>
           </li>
           <li class="category-items">
             <a class="category-items-link" href="#">
-              <img class="category-item" src="#" alt="">
+              <img class="category-item" src="images/catalog-categories/quadrocopter.svg" alt="">
               <p class="category-item-description">Квадрокоптеры</p>
             </a>
           </li>
         </ul>
       </section>
-      <!--Разметка блока Сервис/Доставка-->
+
       <section class="property-service-devivery">
         <h2 class="visually-hidden">Сервис магазина</h2>
         <ul class="service-list">
@@ -250,59 +211,37 @@
           </li>
         </ul>
         <div class="servive-details">
-          <h2 class="service-detail-title">Доставка</h2>
+          <p class="service-detail-title">Доставка</p>
           <p class="service-detail-subtitle">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
             Ведь мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
+          <img class="service-detail-image" src="images/service/deliveryman.svg" alt="Доставщик">
         </div>
-      </section>
-      <!--Разметка блока Сервис/Гарантия-->
-      <section class="property-service-guarantee">
-        <h2 class="visually-hidden">Сервис магазина</h2>
-        <ul class="service-list">
-          <li class="service-item active-item">
-            <a class="service-item-link" href="#">Доставка</a>
-          </li>
-          <li class="service-item">
-            <a class="service-item-link active-link" href="#">Гарантия</a>
-          </li>
-          <li class="service-item">
-            <a class="service-item-link" href="#">Кредит</a>
-          </li>
-        </ul>
         <div class="servive-details">
-          <h2 class="service-detail-title">Гарантия</h2>
+          <p class="service-detail-title">Гарантия</p>
           <p class="service-detail-subtitle">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте,
             мы выдадим вам новый. Товар, не дом, конечно же.
           </p>
+          <img class="service-detail-image" src="images/service/guarantee.svg" alt="Обслуживание по телефону">
         </div>
-      </section>
-      <!--Разметка блока Сервис/Кредит-->
-      <section class="property-service-credit">
-        <h2 class="visually-hidden">Сервис магазина</h2>
-        <ul class="service-list">
-          <li class="service-item active-item">
-            <a class="service-item-link" href="#">Доставка</a>
-          </li>
-          <li class="service-item">
-            <a class="service-item-link" href="#">Гарантия</a>
-          </li>
-          <li class="service-item">
-            <a class="service-item-link active-link" href="#">Кредит</a>
-          </li>
-        </ul>
         <div class="servive-details">
-          <h2 class="service-detail-title">Кредит</h2>
+          <p class="service-detail-title">Кредит</p>
           <p class="service-detail-subtitle">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее
             выгодные условия кредита. Выгодные для банка, разумеется.
           </p>
+          <img class="service-detail-image" src="images/service/credit.svg" alt="Человек с кредитной картой">
         </div>
       </section>
 
 
+
       <section class="delivery">
-        <h2 class="visually-hidden">Доставка</h2>
+        <h2 class="visually-hidden">Доставка под заказ</h2>
+        <img src="images/icons/delivery-car.svg" alt="Автомобиль доставляет товар">
         <p class="delivery-rare">Доставим редкий товар под заказ</p>
+        <a class="delivery-rare-link" href="#">
+          <img src="images/icons/delivery-i.svg" alt="Информация">
+        </a>
       </section>
       <section class="about-us">
         <h2 class="about-us-title">О нас</h2>
@@ -373,12 +312,12 @@
       <div class="shopping-cart">
         <ul class="shopping-cart-list">
           <li class="shopping-cart-item">
-            <img class="shopping-cart-image" src="" alt="">
+            <img class="shopping-cart-image" src="images/shopping-cart/monopod-amateur-small.jpg" alt="">
             <p class="shopping-cart-text">Любительская селфи-палка</p>
             <button class="button-remove-product" type="submit"></button>
           </li>
           <li class="shopping-cart-item">
-            <img class="shopping-cart-image" src="" alt="">
+            <img class="shopping-cart-image" src="images/shopping-cart/monopod-professional-small.jpg" alt="">
             <p class="shopping-cart-text">Профессиональная селфи-палка</p>
             <button class="button-remove-product" type="submit"></button>
           </li>
@@ -390,14 +329,14 @@
 
     </main>
     <footer class="page-footer">
-      <section class="footer-contacts">
+      <div class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <img class="footer-contacts-logo" src="" alt="Логотип Device">
+        <img class="footer-contacts-logo" src="images/logo-footer.svg" alt="Логотип Device">
         <address class="footer-contacts-address">
           <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
-      </section>
-      <section class="footer-services">
+      </div>
+      <div class="footer-services">
         <h2 class="visually-hidden">Сервис</h2>
         <ul class="navigation-services footer-services">
           <li class="services-item">
@@ -410,15 +349,14 @@
             <a class="services-link" href="#">Контакты</a>
           </li>
         </ul>
-      </section>
-      <section class="footer-telephone">
+      </div>
+      <div class="footer-telephone">
         <h2 class="visually-hidden">Телефон</h2>
         <address class="footer-telephone-address">
           <a class="contacts-phone about-telephone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
-      </section>
-      <div class="footer-underline"></div>
-      <section class="footer-social">
+      </div>
+      <div class="footer-social">
         <h2 class="visually-hidden">Давайте дружить</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
@@ -438,9 +376,9 @@
           </li>
         </ul>
         <a class="about-text" href="https://htmlacademy.ru">
-          <img class="about-image" src="" alt="Логотип .html academy">
+          <img class="about-image" src="images/logo-link.svg" alt="Логотип .html academy">
         </a>
-      </section>
+      </div>
     </footer>
   </body>
 </html>
