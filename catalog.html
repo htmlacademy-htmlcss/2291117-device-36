@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Девайс. Каталог</title>
+    <title>HTML Academy: Девайс. Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -11,9 +11,11 @@
 
     <header class="page-header">
       <h1 class="visually-hidden">Девайс</h1>
-      <a class="logo-link">
-        <img class="logo" src="images/logo-header.svg" width="145" height="36" alt="Логотип Девайс">
-      </a>
+      <div class="logo-link-container">
+        <a class="logo-link">
+          <img class="logo" src="images/logo-header.svg" width="145" height="36" alt="Логотип Девайс">
+        </a>
+      </div>
       <div class="user-menu">
         <form class="user-search-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="user-search-site"><span class="visually-hidden">Окно поиска</span></label>
@@ -41,11 +43,34 @@
       <!--Разметка nav-->
 
       <nav class="navigation">
-        <div class="catalog-all">
-          <h2 class="catalog-title section-link">Каталог товаров</h2>
-          <button class="catalog-show" type="submit">
-            <span class="visually-hidden">Раскрыть каталог</span>
-          </button>
+        <div class="catalog-show" type="submit">
+          <p class="catalog-show-text">Каталог товаров</p>
+          <div class="catalog-list-container open-dropdown">
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <a class="catalog-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-link" href="catalog.html">Моноподы для cелфи</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <a class="catalog-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-link" href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <a class="catalog-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <ul class="navigation-services">
           <li class="services-item">
@@ -59,26 +84,6 @@
           </li>
         </ul>
       </nav>
-      <ul class="catalog-list visually-hidden">
-        <li class="catalog-item">
-          <a class="catalog-link" href="#">Виртуальная реальность</a>
-        </li>
-        <li class="catalog-item">
-          <a class="catalog-link" href="catalog.html">Моноподы для cелфи</a>
-        </li>
-        <li class="catalog-item">
-          <a class="catalog-link" href="#">Экшн-камеры</a>
-        </li>
-        <li class="catalog-item">
-          <a class="catalog-link" href="#">Фитнес-браслеты</a>
-        </li>
-        <li class="catalog-item">
-          <a class="catalog-link" href="#">Умные часы</a>
-        </li>
-        <li class="catalog-item">
-          <a class="catalog-link" href="#">Квадрокоптеры</a>
-        </li>
-      </ul>
     </header>
 
     <!--Разметка main-->
@@ -153,7 +158,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="filter-button section-link" type="submit">Показать</button>
+              <button class="filter-button button" type="submit">Показать</button>
             </form>
           </section>
           <div class="select-products-container">
@@ -164,10 +169,10 @@
                 <option value="empty">Выберите</option>
               </select>
               <div class="buttons-container">
-                <button class="button-ascending">
+                <button class="button-ascending button-sort">
                   <span class="visually-hidden">По возрастанию</span>
                 </button>
-                <button class="button-descending">
+                <button class="button-descending button-sort">
                   <span class="visually-hidden">По убыванию</span>
                 </button>
               </div>
@@ -177,42 +182,42 @@
                 <li class="product-card">
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog/monopod-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                    <div class="product-card-container">
-                      <h3 class="product-card-title  form-label">Любительская селфи-палка</h3>
-                      <p class="product-card-price">500 ₽</p>
-                    </div>
                   </a>
+                  <div class="product-card-container">
+                    <a class="product-card-title-link form-label" href="#">Любительская <br>селфи-палка</a>
+                    <span class="product-card-price">500 ₽</span>
+                  </div>
                 </li>
                 <li class="product-card">
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog/monopod-professional.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                    <div class="product-card-container">
-                      <h3 class="product-card-title  form-label">Профессиональная селфи-палка</h3>
-                      <p class="product-card-price">1500 ₽</p>
-                    </div>
                   </a>
+                  <div class="product-card-container">
+                    <a class="product-card-title-link form-label" href="#">Профессиональная <br>селфи-палка</a>
+                    <p class="product-card-price">1500 ₽</p>
+                  </div>
                 </li>
                 <li class="product-card">
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog/monopod-unsinkable.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                    <div class="product-card-container">
-                      <h3 class="product-card-title  form-label">Непотопляемая селфи-палка</h3>
-                      <p class="product-card-price">2500 ₽</p>
-                    </div>
                   </a>
+                  <div class="product-card-container">
+                    <a class="product-card-title-link form-label" href="#">Непотопляемая <br>селфи-палка</a>
+                    <span class="product-card-price">2500 ₽</span>
+                  </div>
                 </li>
                 <li class="product-card">
                   <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog/monopod-foloow-me.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                    <div class="product-card-container">
-                      <h3 class="product-card-title  form-label">Селфи-палка «Следуй за мной»</h3>
-                      <p class="product-card-price">1500 ₽</p>
-                    </div>
                   </a>
+                  <div class="product-card-container">
+                    <a class="product-card-title-link  form-label" href="#">Селфи-палка «Следуй <br>за мной»</a>
+                    <span class="product-card-price">1500 ₽</span>
+                  </div>
                 </li>
               </ul>
               <div class="pagination-show-more-container">
-                <button class="button pagination-show-more section-catalog" type="button">Загрузить ещё</button>
+                <button class="button pagination-show-more section-catalog" type="submit">Загрузить ещё</button>
               </div>
               <section class="pagination">
                 <a class="pages-number-link pages-number-prev pages-number-disabled section-link" href="#">Назад</a>
@@ -297,7 +302,7 @@
               </address>
             </div>
             <a class="about-link" href="https://htmlacademy.ru">
-              <img class="about-image" src="images/logo-link.svg" width="114.9" height="32.9" alt="Логотип .html academy">
+              <img class="about-image" src="images/logo-link.svg" width="115" height="33" alt="Логотип .html academy">
             </a>
           </div>
         </div>
