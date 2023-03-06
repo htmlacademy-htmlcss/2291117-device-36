@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс. Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" sizes="32x32" href="images/favicon.png">
   </head>
   <body>
 
@@ -18,7 +19,7 @@
         <form class="user-search-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="user-search-site"><span class="visually-hidden">Окно поиска</span></label>
           <div class="user-search-field-container">
-            <input class="user-search-field subtitle-text-style" type="text" placeholder="Поиск по сайту" name="user-search-site" id="user-search-site">
+            <input class="user-search-field subtitle-text-style" type="text" placeholder="Поиск по сайту" name="user-search-site" id="user-search-site" required>
           </div>
           <div class="user-search-button-container">
             <button class="user-search-button subtitle-text-style" type="submit"><span class="user-search-button-text">Найти</span></button>
@@ -38,6 +39,30 @@
           </li>
           <li class="user-cart-item">
             <a class="user-cart-link user-cart-link-catalog" href="#">Корзина</a>
+            <div class="popover popover-cart">
+              <div class="popover-content">
+                <h2 class="visually-hidden">Корзина</h2>
+              </div>
+              <ul class="shopping-cart-list">
+                <li class="shopping-cart-item">
+                  <a class="shopping-cart-link shopping-cart-link-amateur" href="#">Любительская <br>селфи-палка</a>
+                  <button class="button-remove-product" type="submit"></button>
+                </li>
+                <li class="shopping-cart-item">
+                  <a class="shopping-cart-link shopping-cart-link-professional" href="#">Профессиональная <br>селфи-палка</a>
+                  <button class="button-remove-product" type="submit"></button>
+                </li>
+              </ul>
+              <div class="shopping-cart-summary">
+                <p class="shopping-cart-number-of-goods">Товаров: 2</p>
+                <p class="shopping-cart-amount">Сумма: 2000 ₽</p>
+              </div>
+              <div class="shopping-cart-link-container">
+                <a class="shopping-cart-open-link button-link-style" href="#">
+                  <span class="shopping-cart-button-text">Открыть корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -45,38 +70,41 @@
       <!--Разметка nav-->
 
       <nav class="navigation">
-        <ul class="navigation-catalog">
-          <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link button-link-style" href="#">Каталог товаров</a>
-            <ul class="navigation-subcatalog">
-              <li class="navigation-subcatalog-item">
-                <a class="navigation-subcatalog-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="navigation-subcatalog-item">
-                <a class="navigation-subcatalog-link" href="catalog.html">Моноподы для cелфи</a>
-              </li>
-              <li class="navigation-subcatalog-item">
-                <a class="navigation-subcatalog-link" href="#">Экшн-камеры</a>
-              </li>
-              <li class="navigation-subcatalog-item">
-                <a class="navigation-subcatalog-link" href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="navigation-subcatalog-item">
-                <a class="navigation-subcatalog-link" href="#">Умные часы</a>
-              </li>
-              <li class="navigation-subcatalog-item">
-                <a class="navigation-subcatalog-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
+        <div class="navigation-catalog">
+          <a class="navigation-catalog-link button-link-style" href="#">
+            <p class="navigation-catalog-text">Каталог товаров</p>
+            <span class="navigation-catalog-icon"></span>
+          </a>
+          <ul class="navigation-subcatalog">
+            <li class="navigation-subcatalog-item">
+              <a class="navigation-subcatalog-link" href="#">Виртуальная реальность</a>
+            </li>
+            <li class="navigation-subcatalog-item">
+              <a class="navigation-subcatalog-link" href="catalog.html">Моноподы для cелфи</a>
+            </li>
+            <li class="navigation-subcatalog-item">
+              <a class="navigation-subcatalog-link" href="#">Экшн-камеры</a>
+            </li>
+            <li class="navigation-subcatalog-item">
+              <a class="navigation-subcatalog-link" href="#">Фитнес-браслеты</a>
+            </li>
+            <li class="navigation-subcatalog-item">
+              <a class="navigation-subcatalog-link" href="#">Умные часы</a>
+            </li>
+            <li class="navigation-subcatalog-item">
+              <a class="navigation-subcatalog-link" href="#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="navigation-menu">
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link button-link-style" href="#">Доставка</a>
           </li>
-          <li class="navigation-catalog-item ">
-            <a class="navigation-catalog-link button-link-style" href="#">Доставка</a>
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link button-link-style" href="#">Гарантия</a>
           </li>
-          <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link button-link-style" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-catalog-item">
-            <a class="navigation-catalog-link button-link-style" href="#">Контакты</a>
+          <li class="navigation-menu-item">
+            <a class="navigation-menu-link button-link-style" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -110,16 +138,20 @@
                 <legend class="catalog-filter-title form-label">Стоимость</legend>
                 <div class="range">
                   <div class="range-scale">
-                    <div class="range-bar" style="left:0; width:119px">
+                    <div class="range-bar" style="left:10px; width:119px">
                       <button type="button" class="range-toggle toggle-min"></button>
                       <button type="button" class="range-toggle toggle-max"></button>
                     </div>
                   </div>
                   <div class="range-wrapper-inputs">
-                    <label class="catalog-filter-label filter-label-min">от <input class="range-input" type="number" value="0" name="min-price">
+                    <label class="catalog-filter-label filter-label-min">
+                      <span class="catalog-filter-label-text">от</span>
+                      <input class="range-input" type="number" value="0" name="min-price">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </label>
-                    <label class="catalog-filter-label filter-label-max">до <input class="range-input" type="number" value="5000" name="max-price" style="width: 37px;">
+                    <label class="catalog-filter-label filter-label-max">
+                      <span class="catalog-filter-label-text">до</span>
+                      <input class="range-input" type="number" value="5000" name="max-price" style="width: 37px;">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </label>
                   </div>
@@ -168,14 +200,14 @@
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title form-label">Bluetooth</legend>
                 <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
+                  <li class="catalog-filter-item catalog-filter-item-radio">
                     <label class="control">
                       <input class="control-input visually-hidden" type="radio" name="bluetooth" value="yes" checked>
                       <span class="control-point"></span>
                       <span class="control-range subtitle-text-style">Есть</span>
                     </label>
                   </li>
-                  <li class="catalog-filter-item">
+                  <li class="catalog-filter-item catalog-filter-item-radio">
                     <label class="control">
                       <input class="control-input visually-hidden" type="radio" name="bluetooth" value="no">
                       <span class="control-point"></span>
@@ -197,55 +229,77 @@
                 </select>
               </div>
               <div class="buttons-container">
-                <button class="button-ascending button-sort" type="submit">
+                <button class="button-sort" type="button">
                   <span class="visually-hidden">По возрастанию</span>
+                  <span class="button-sort-ascending"></span>
                 </button>
-                <button class="button-descending button-sort" type="submit">
+                <button class="button-sort" type="button">
                   <span class="visually-hidden">По убыванию</span>
+                  <span class="button-sort-descending"></span>
                 </button>
               </div>
             </section>
             <div class="products">
               <ul class="product-list">
                 <li class="product-card">
-                  <a class="product-card-link" href="#">
-                    <img class="product-card-image" src="images/catalog/monopod-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                    <p class="product-card-subtitle button-link-style crossing">Подробнее</p>
-                    <div class="product-card-container">
-                      <p class="product-card-text form-label">Любительская <br>селфи-палка</p>
-                      <span class="product-card-price">500 ₽</span>
-                    </div>
-                  </a>
+                  <div class="product-card-inner">
+                    <a class="product-card-link" href="#">
+                      <div class="product-card-image-container">
+                        <img class="product-card-image" src="images/catalog/monopod-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                        <p class="product-card-subtitle button-link-style crossing">Подробнее</p>
+                        <span class="product-card-new"></span>
+                      </div>
+                      <div class="product-card-container">
+                        <p class="product-card-text form-label">Любительская <br>селфи-палка</p>
+                        <span class="product-card-price">500 ₽</span>
+                      </div>
+                    </a>
+                  </div>
                 </li>
                 <li class="product-card">
-                  <a class="product-card-link" href="#">
-                    <img class="product-card-image" src="images/catalog/monopod-professional.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                    <p class="product-card-subtitle button-link-style crossing">Подробнее</p>
-                    <div class="product-card-container">
-                      <p class="product-card-text form-label">Профессиональная <br>селфи-палка</p>
-                      <span class="product-card-price">1500 ₽</span>
-                    </div>
-                  </a>
+                  <div class="product-card-inner">
+                    <a class="product-card-link" href="#">
+                      <div class="product-card-image-container">
+                        <img class="product-card-image" src="images/catalog/monopod-professional.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                        <p class="product-card-subtitle button-link-style crossing">Подробнее</p>
+                        <span class="product-card-new"></span>
+                      </div>
+                      <div class="product-card-container">
+                        <p class="product-card-text form-label">Профессиональная <br>селфи-палка</p>
+                        <span class="product-card-price">1 500 ₽</span>
+                      </div>
+                    </a>
+                  </div>
                 </li>
                 <li class="product-card">
-                  <a class="product-card-link" href="#">
-                    <img class="product-card-image" src="images/catalog/monopod-unsinkable.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                    <p class="product-card-subtitle button-link-style crossing">Подробнее</p>
-                    <div class="product-card-container">
-                      <p class="product-card-text form-label">Непотопляемая <br>селфи-палка</p>
-                      <span class="product-card-price">2500 ₽</span>
-                    </div>
-                  </a>
+                  <div class="product-card-inner">
+                    <a class="product-card-link" href="#">
+                      <div class="product-card-image-container">
+                        <img class="product-card-image" src="images/catalog/monopod-unsinkable.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                        <p class="product-card-subtitle button-link-style crossing">Подробнее</p>
+                        <span class="product-card-new"></span>
+                      </div>
+                      <div class="product-card-container">
+                        <p class="product-card-text form-label">Непотопляемая <br>селфи-палка</p>
+                        <span class="product-card-price">2 500 ₽</span>
+                      </div>
+                    </a>
+                  </div>
                 </li>
                 <li class="product-card">
-                  <a class="product-card-link" href="#">
-                    <img class="product-card-image" src="images/catalog/monopod-foloow-me.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                    <p class="product-card-subtitle button-link-style crossing">Подробнее</p>
-                    <div class="product-card-container">
-                      <p class="product-card-text form-label">Селфи-палка «Следуй <br>за мной»</p>
-                      <span class="product-card-price">1500 ₽</span>
-                    </div>
-                  </a>
+                  <div class="product-card-inner">
+                    <a class="product-card-link" href="#">
+                      <div class="product-card-image-container">
+                        <img class="product-card-image" src="images/catalog/monopod-foloow-me.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                        <p class="product-card-subtitle button-link-style crossing">Подробнее</p>
+                        <span class="product-card-new"></span>
+                      </div>
+                      <div class="product-card-container">
+                        <p class="product-card-text form-label">Селфи-палка «Следуй <br>за мной»</p>
+                        <span class="product-card-price">1 500 ₽</span>
+                      </div>
+                    </a>
+                  </div>
                 </li>
               </ul>
               <div class="pagination-show-more-container">
@@ -320,7 +374,7 @@
           <div class="footer-telephone">
             <h2 class="visually-hidden">Телефон</h2>
             <address class="footer-telephone-address">
-              <a class="footer-telephone subtitle-text-style" href="tel:+78128121212">Тел.:+7 (812) 812-12-12</a>
+              <a class="footer-telephone subtitle-text-style" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
             </address>
           </div>
           <div class="footer-social">
