@@ -1344,10 +1344,16 @@ img {
   padding-left: 20px;
 }
 
-.input-error {
+.input-area-email:invalid {
   outline: 2px solid #ff3d3d;
 }
-
+.delivery-form-subtitle-email {
+  color: #ff3d3d;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
 .input-area:not([disabled]):hover {
   background: #dcdcdc;
   transition: 0.4s;
