@@ -22,7 +22,9 @@
             <input class="user-search-field subtitle-text-style" type="text" placeholder="Поиск по сайту" name="user-search-site" id="user-search-site" required>
           </div>
           <div class="user-search-button-container">
-            <button class="user-search-button subtitle-text-style" type="submit"><span class="user-search-button-text">Найти</span></button>
+            <button class="user-search-button subtitle-text-style" type="submit">
+              <span class="user-search-button-text">Найти</span>
+            </button>
           </div>
         </form>
         <ul class="user-navigation">
@@ -46,11 +48,15 @@
               <ul class="shopping-cart-list">
                 <li class="shopping-cart-item">
                   <a class="shopping-cart-link shopping-cart-link-amateur" href="#">Любительская <br>селфи-палка</a>
-                  <button class="button-remove-product" type="submit"></button>
+                  <button class="button-remove-product" type="button">
+                    <span class="visually-hidden">Удалить продукт из корзины</span>
+                  </button>
                 </li>
                 <li class="shopping-cart-item">
                   <a class="shopping-cart-link shopping-cart-link-professional" href="#">Профессиональная <br>селфи-палка</a>
-                  <button class="button-remove-product" type="submit"></button>
+                  <button class="button-remove-product" type="button">
+                    <span class="visually-hidden">Удалить продукт из корзины</span>
+                  </button>
                 </li>
               </ul>
               <div class="shopping-cart-summary">
@@ -230,11 +236,11 @@
               </div>
               <div class="buttons-container">
                 <button class="button-sort" type="button">
-                  <span class="visually-hidden">По возрастанию</span>
+                  <span class="visually-hidden">Сортировать по возрастанию</span>
                   <span class="button-sort-ascending"></span>
                 </button>
                 <button class="button-sort" type="button">
-                  <span class="visually-hidden">По убыванию</span>
+                  <span class="visually-hidden">Сортировать по убыванию</span>
                   <span class="button-sort-descending"></span>
                 </button>
               </div>
@@ -303,7 +309,7 @@
                 </li>
               </ul>
               <div class="pagination-show-more-container">
-                <button class="button pagination-show-more section-catalog" type="submit">Загрузить ещё</button>
+                <button class="button pagination-show-more section-catalog" type="button">Загрузить ещё</button>
               </div>
               <div class="pagination">
                 <a class="pages-number-link pages-number-prev pages-number-disabled button-link-style" href="#">

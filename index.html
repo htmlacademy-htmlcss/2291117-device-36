@@ -22,7 +22,9 @@
             <input class="user-search-field subtitle-text-style" type="text" placeholder="Поиск по сайту" name="user-search-site" id="user-search-site" required>
           </div>
           <div class="user-search-button-container">
-            <button class="user-search-button subtitle-text-style" type="submit"><span class="user-search-button-text">Найти</span></button>
+            <button class="user-search-button subtitle-text-style" type="submit">
+              <span class="user-search-button-text">Найти</span>
+            </button>
           </div>
         </form>
         <ul class="user-navigation">
@@ -43,11 +45,15 @@
               <ul class="shopping-cart-list">
                 <li class="shopping-cart-item">
                   <a class="shopping-cart-link shopping-cart-link-amateur" href="#">Любительская <br>селфи-палка</a>
-                  <button class="button-remove-product" type="submit"></button>
+                  <button class="button-remove-product" type="button">
+                    <span class="visually-hidden">Удалить продукт из корзины</span>
+                  </button>
                 </li>
                 <li class="shopping-cart-item">
                   <a class="shopping-cart-link shopping-cart-link-professional" href="#">Профессиональная <br>селфи-палка</a>
-                  <button class="button-remove-product" type="submit"></button>
+                  <button class="button-remove-product" type="button">
+                    <span class="visually-hidden">Удалить продукт из корзины</span>
+                  </button>
                 </li>
               </ul>
               <div class="shopping-cart-summary">
@@ -417,7 +423,7 @@
           <div class="modal-content-header">
             <h2 class="modal-content-title section-header">Доставка под заказ</h2>
             <button class="modal-close-button">
-              <span class="visually-hidden">Закрыть</span>
+              <span class="visually-hidden">Закрыть окно</span>
             </button>
           </div>
           <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -442,14 +448,18 @@
                 <span class="form-label form-label-icon">
                   <label class="form-label delivery-form-label delivery-form-label-quantity" for="delivery-quantity">Количество:</label>
                   <span class="tooltip">
-                    <button class="tooltip-toggle" aria-labelledby="tooltip-label-date"></button>
+                    <button class="tooltip-toggle" aria-labelledby="tooltip-label-date" type="button"></button>
                     <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Постараемся найти,<br> сколько нужно.<br> Привезём сколько<br> получится по<br> требованиям <br>к провозу багажа.</span>
                   </span>
                 </span>
                 <div class="quantity-container">
-                  <button class="button-quantity button-quantity-minus" type="button"></button>
+                  <button class="button-quantity button-quantity-minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество</span>
+                  </button>
                   <input class="input-area input-area-quantity" type="number" id="delivery-quantity" name="delivery-quantity" placeholder="1" min="1" max="100">
-                  <button class="button-quantity button-quantity-plus" type="button"></button>
+                  <button class="button-quantity button-quantity-plus" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
                 </div>
               </div>
             </div>
