@@ -793,6 +793,7 @@ img {
   position: relative;
   z-index: 1;
   cursor: pointer;
+  background: transparent;
 }
 
 .crossing::before {
@@ -1119,38 +1120,10 @@ img {
   padding-bottom: 50px;
 }
 
-.delivery-container {
+.delivery-link {
   text-decoration: none;
-  display: grid;
-  grid-template-columns: 125px auto 125px;
   margin-bottom: 20px;
-}
-
-.delivery-container:hover .delivery-car-link {
-  background-color: #ffc700;
-  transition: 0.5s;
-}
-
-.delivery-container:active {
-  opacity: 0.3;
-  transition: 0.3s;
-}
-
-.delivery-container:focus-visible {
-  outline: 2px solid #af4fff;
-  outline-offset: 2px;
-}
-
-.delivery-car-link {
-  background-color: #ffe17f;
-  background-image: url("../images/icons/delivery-car.svg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center center;
-  margin: 0;
-}
-
-.delivery-text-link {
+  padding: 38.5px 125px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 20px;
@@ -1160,18 +1133,58 @@ img {
   background: #f0f0f0;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
-  padding: 40px 18px 37px 22px;
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
 }
 
-.delivery-i-link {
+.delivery-link::before {
+  content: "";
+  position: absolute;
+  background-color: #ffe17f;
+  background-image: url("../images/icons/delivery-car.svg");
+  background-repeat: no-repeat;
+  background-size: 47px 31px;
+  background-position: center center;
+  width: 125px;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.delivery-link::after {
+  content: "";
+  position: absolute;
   background-color: #f0f0f0;
   background-image: url("../images/icons/delivery-i.svg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 40px 40px;
   background-position: center center;
-  position: relative;
-  margin: 0;
+  width: 125px;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.delivery-link:hover::before {
+  background-color: #ffc700;
+  transition: 0.5s;
+}
+
+.delivery-link:hover::after {
+  background-image: url("../images/icons/delivery-i-hover.svg");
+  transition: 0.5s;
+}
+
+.delivery-link:active {
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.delivery-link:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .delivery-i-link::before {
@@ -1714,6 +1727,7 @@ img {
   box-sizing: border-box;
   padding: 15.6px 34px 15.6px 36px;
   cursor: pointer;
+  background: transparent;
 }
 
 .subscribe-button:not([disabled]):hover {
@@ -2458,6 +2472,7 @@ img {
 
 .button-sort:focus {
   outline: 2px solid #af4fff;
+  opacity: 0.2;
 }
 
 .products {

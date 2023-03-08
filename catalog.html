@@ -64,9 +64,7 @@
                 <p class="shopping-cart-amount">Сумма: 2000 ₽</p>
               </div>
               <div class="shopping-cart-link-container">
-                <a class="shopping-cart-open-link button-link-style" href="#">
-                  <span class="shopping-cart-button-text">Открыть корзину</span>
-                </a>
+                <a class="shopping-cart-open-link button-link-style" href="#">Открыть корзину</a>
               </div>
             </div>
           </li>
@@ -145,8 +143,12 @@
                 <div class="range">
                   <div class="range-scale">
                     <div class="range-bar" style="left:10px; width:119px">
-                      <button type="button" class="range-toggle toggle-min"></button>
-                      <button type="button" class="range-toggle toggle-max"></button>
+                      <button type="button" class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                      </button>
+                      <button type="button" class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                      </button>
                     </div>
                   </div>
                   <div class="range-wrapper-inputs">
@@ -235,13 +237,11 @@
                 </select>
               </div>
               <div class="buttons-container">
-                <button class="button-sort" type="button">
+                <button class="button-sort button-sort-ascending" type="button">
                   <span class="visually-hidden">Сортировать по возрастанию</span>
-                  <span class="button-sort-ascending"></span>
                 </button>
-                <button class="button-sort" type="button">
+                <button class="button-sort button-sort-descending" type="button">
                   <span class="visually-hidden">Сортировать по убыванию</span>
-                  <span class="button-sort-descending"></span>
                 </button>
               </div>
             </section>
